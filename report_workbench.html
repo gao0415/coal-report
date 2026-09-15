@@ -11335,7 +11335,37 @@ async function loadLinksData() {
         req.onerror = () => res(null);
       });
     })();
-    const saved = fullData && fullData.links ? fullData.links : [];
+    let saved = fullData && fullData.links ? fullData.links : [];
+    // 如果IndexedDB中没有数据（首次访问），从模板数据加载
+    if ((!saved || saved.length === 0) && typeof TEMPLATE_INITIAL_DATA !== 'undefined' && TEMPLATE_INITIAL_DATA.links && TEMPLATE_INITIAL_DATA.links.length > 0) {
+      console.log('IndexedDB无链接数据，从模板加载', TEMPLATE_INITIAL_DATA.links.length, '条');
+      saved = JSON.parse(JSON.stringify(TEMPLATE_INITIAL_DATA.links));
+      // 同时保存到IndexedDB，避免下次重复加载
+      try {
+        const db = await new Promise((res, rej) => {
+          const req = indexedDB.open('ReportWorkbench_Template');
+          req.onsuccess = e => res(e.target.result);
+          req.onerror = () => res(null);
+        });
+        if (db) {
+          const key = 'report_' + viewP;
+          const existing = await new Promise(res => {
+            const g = db.transaction('report_data','readonly').objectStore('report_data').get(key);
+            g.onsuccess = () => res(g.result || null);
+            g.onerror = () => res(null);
+          });
+          const dataToSave = existing || { period: viewP, blocks: [], links: saved };
+          dataToSave.links = saved;
+          await new Promise((res, rej) => {
+            const tx = db.transaction('report_data','readwrite');
+            tx.objectStore('report_data').put(dataToSave, key);
+            tx.oncomplete = () => res();
+            tx.onerror = () => res();
+          });
+          console.log('模板链接数据已保存到IndexedDB');
+        }
+      } catch(e) { console.warn('保存模板数据到IndexedDB失败:', e); }
+    }
     // 根据 blocks 推导 linkId -> 一级标题分类 的映射
     const catMap = {};
     if (fullData && fullData.blocks) {
@@ -11363,6 +11393,11 @@ async function loadLinksData() {
       // 数据结构迁移：updateTime单值 → updateTimes按期存储
       var _updateTimes = l.updateTimes || {};
       if (normTime && !_updateTimes[viewP]) _updateTimes[viewP] = normTime;
+      // 自动判断：URL不为空时自动标记为已更新
+      let autoStatus = l.updateStatus || ((l.url && normTime) ? UPDATE_STATUS_DONE : UPDATE_STATUS_PENDING);
+      if (l.url && autoStatus !== UPDATE_STATUS_DONE) {
+        autoStatus = UPDATE_STATUS_DONE;
+      }
       return {
         id: l.id,
         title: l.title || l.keyword || l.id,
@@ -11375,7 +11410,7 @@ async function loadLinksData() {
         order: l.order || 0,
         updateTime: normTime,
         updateTimes: _updateTimes,
-        updateStatus: l.updateStatus || ((l.url && normTime) ? UPDATE_STATUS_DONE : UPDATE_STATUS_PENDING),
+        updateStatus: autoStatus,
         dataMonth: viewP
       };
     });
@@ -11566,7 +11601,11 @@ function saveLink() {
   const source = document.getElementById('link-form-source').value.trim();
   const dataMonth = document.getElementById('link-form-datamonth').value.trim();
   const updateTime = document.getElementById('link-form-updatetime').value.trim();
-  const updateStatus = document.getElementById('link-form-status').value;
+  let updateStatus = document.getElementById('link-form-status').value;
+  // 自动判断：URL不为空时自动标记为已更新
+  if (url && updateStatus !== UPDATE_STATUS_DONE) {
+    updateStatus = UPDATE_STATUS_DONE;
+  }
   
   if (!title) { showToast('请输入链接标题', 'warning'); return; }
   if (!url) { showToast('请输入链接地址', 'warning'); return; }
@@ -13606,6 +13645,14 @@ async function switchModule(moduleName) {
   // 照片处理模块初始化
   if (moduleName === 'photo') {
     photoInit();
+  }
+  // 首页模块初始化：刷新统计和进度
+  if (moduleName === 'home') {
+    try {
+      if (typeof homeRenderStats === 'function') homeRenderStats();
+      if (typeof homeUpdateProgress === 'function') homeUpdateProgress();
+      if (typeof homeRenderRecent === 'function') homeRenderRecent();
+    } catch(e) { console.warn('首页初始化失败:', e); }
   }
   // 隐藏模块加载动画
   hideModuleLoading();
