@@ -16953,7 +16953,7 @@ applyImageEdit = function() {
 //  报告模板更新模块
 // ============================================================
 </script>
-<script src="template_data.js"></script>
+<script src="template_data.js?v=20260916"></script>
 <script>
 
 let tplState = {
@@ -19772,7 +19772,7 @@ function homeRenderStats() {
           imgs += tmp.querySelectorAll('img').length;
         }
         const l = b.linkId ? (tplState.data.links||[]).find(x=>x.id===b.linkId) : null;
-        if (l && (!l.url || !l.updateTime)) missing++;
+        if (l && !l.url) missing++;
       }
     });
   }

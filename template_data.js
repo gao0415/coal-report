@@ -1,7 +1,7 @@
 const TEMPLATE_INITIAL_DATA = {
   "title": "煤炭行业月度研究报告",
   "period": "2026年8月",
-  "links": [
+  "links":         [
     {
       "id": "link_001",
       "title": "宏观经济环境",
@@ -10,7 +10,10 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "国家统计局",
       "category": "国内宏观环境分析",
       "updateTime": "2026-09-14",
-      "updateStatus": "待更新",
+      "updateTimes": {
+        "2026-08": "2026-09-14"
+      },
+      "updateStatus": "已更新",
       "note": "来源：国家统计局",
       "order": 1,
       "dataMonth": "2026-08"
@@ -22,8 +25,11 @@ const TEMPLATE_INITIAL_DATA = {
       "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965055.html",
       "source": "国家统计局",
       "category": "国内宏观环境分析",
-      "updateTime": "",
-      "updateStatus": "待更新",
+      "updateTime": "2026-08-17",
+      "updateTimes": {
+        "2026-08": "2026-08-17"
+      },
+      "updateStatus": "已更新",
       "note": "来源：国家统计局",
       "order": 1,
       "dataMonth": "2026-08"
@@ -33,11 +39,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "制造业采购经理指数（PMI）",
       "keyword": "制造业采购经理指数（PMI）",
       "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260731_1964253.html",
-      "source": "",
+      "source": "国家统计局",
       "category": "国内宏观环境分析",
-      "updateTime": "",
+      "updateTime": "2026-07-31",
+      "updateTimes": {
+        "2026-08": "2026-07-31"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：国家统计局",
       "order": 1,
       "dataMonth": "2026-08"
     },
@@ -49,6 +58,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "国家统计局 解读",
       "category": "国内宏观环境分析",
       "updateTime": "2026-07-31",
+      "updateTimes": {
+        "2026-08": "2026-07-31"
+      },
       "updateStatus": "已更新",
       "note": "来源：国家统计局 解读",
       "order": 1,
@@ -59,11 +71,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "物流景气指数",
       "keyword": "物流景气指数",
       "url": "http://www.chinawuliu.com.cn/",
-      "source": "",
+      "source": "中国物流与采购联合会",
       "category": "国内宏观环境分析",
       "updateTime": "2026-08-06",
+      "updateTimes": {
+        "2026-08": "2026-08-06"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：中国物流与采购联合会",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -72,11 +87,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "房地产开发及销售情况",
       "keyword": "房地产开发及销售情况",
       "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260817_1965052.html",
-      "source": "",
+      "source": "国家统计局",
       "category": "国内宏观环境分析",
-      "updateTime": "",
+      "updateTime": "2026-08-17",
+      "updateTimes": {
+        "2026-08": "2026-08-17"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：国家统计局",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -85,11 +103,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "全国居民消费价格",
       "keyword": "全国居民消费价格",
       "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260809_1965008.html",
-      "source": "",
+      "source": "国家统计局",
       "category": "国内宏观环境分析",
       "updateTime": "2026-08-09",
+      "updateTimes": {
+        "2026-08": "2026-08-09"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：国家统计局",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -98,11 +119,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "居民消费价格指数（CPI）解读",
       "keyword": "居民消费价格指数（CPI）解读",
       "url": "https://www.stats.gov.cn/sj/sjjd/202608/t20260809_1965009.html",
-      "source": "",
+      "source": "国家统计局",
       "category": "国内宏观环境分析",
       "updateTime": "2026-08-09",
+      "updateTimes": {
+        "2026-08": "2026-08-09"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：国家统计局",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -111,11 +135,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "工业生产者出厂价格",
       "keyword": "工业生产者出厂价格",
       "url": "https://www.stats.gov.cn/sj/zxfb/202608/t20260809_1965007.html",
-      "source": "",
+      "source": "国家统计局",
       "category": "国内宏观环境分析",
       "updateTime": "2026-08-09",
+      "updateTimes": {
+        "2026-08": "2026-08-09"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：国家统计局",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -124,11 +151,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "工业生产者出厂价格指数解读",
       "keyword": "工业生产者出厂价格指数解读",
       "url": "https://www.stats.gov.cn/sj/sjjd/202608/t20260809_1965009.html",
-      "source": "",
+      "source": "国家统计局",
       "category": "国内宏观环境分析",
       "updateTime": "2026-08-09",
+      "updateTimes": {
+        "2026-08": "2026-08-09"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：国家统计局",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -137,11 +167,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "金融统计数据",
       "keyword": "金融统计数据",
       "url": "https://www.pbc.gov.cn/goutongjiaoliu/113456/113469/2026081414193264304/index.html",
-      "source": "",
+      "source": "中国人民银行",
       "category": "国内宏观环境分析",
       "updateTime": "2026-08-14",
+      "updateTimes": {
+        "2026-08": "2026-08-14"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：中国人民银行",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -150,11 +183,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "贷款市场报价利率",
       "keyword": "贷款市场报价利率",
       "url": "https://www.pbc.gov.cn/zhengcehuobisi/125207/125213/125440/3876551/2026072008093186869/index.html",
-      "source": "",
+      "source": "中国人民银行",
       "category": "国内宏观环境分析",
-      "updateTime": "",
-      "updateStatus": "待更新",
-      "note": "",
+      "updateTime": "2026-07-20",
+      "updateTimes": {
+        "2026-08": "2026-07-20"
+      },
+      "updateStatus": "已更新",
+      "note": "来源：中国人民银行",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -163,11 +199,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "金融数据分析",
       "keyword": "金融数据分析",
       "url": "https://mp.weixin.qq.com/s/6_gQ1rQzo-mXd9q63Njiyg",
-      "source": "",
+      "source": "中国银行保险报",
       "category": "国内宏观环境分析",
-      "updateTime": "",
-      "updateStatus": "待更新",
-      "note": "",
+      "updateTime": "2026-07-15",
+      "updateTimes": {
+        "2026-08": "2026-07-15"
+      },
+      "updateStatus": "已更新",
+      "note": "来源：中国银行保险报",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -179,6 +218,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "国家统计局",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-17",
+      "updateTimes": {
+        "2026-08": "2026-08-17"
+      },
       "updateStatus": "已更新",
       "note": "来源：国家统计局",
       "order": 0,
@@ -192,6 +234,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "备注：精粹模块－分省市原煤产量",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-19",
+      "updateTimes": {
+        "2026-08": "2026-08-19"
+      },
       "updateStatus": "已更新",
       "note": "备注：精粹模块－分省市原煤产量",
       "order": 0,
@@ -205,6 +250,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国太原煤炭交易中心",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-07-31",
+      "updateTimes": {
+        "2026-08": "2026-07-31"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国太原煤炭交易中心",
       "order": 0,
@@ -215,11 +263,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "CECI曹妃甸指数",
       "keyword": "CECI曹妃甸指数",
       "url": "https://mp.weixin.qq.com/s/fHJ55u6ydL2JFMU3sMA95A",
-      "source": "",
+      "source": "贵煤数据公众号",
       "category": "煤炭发展情况分析",
-      "updateTime": "",
-      "updateStatus": "待更新",
-      "note": "",
+      "updateTime": "2026-07-17",
+      "updateTimes": {
+        "2026-08": "2026-07-17"
+      },
+      "updateStatus": "已更新",
+      "note": "来源：贵煤数据公众号",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -231,6 +282,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券7.5—P11",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券7.5—P11",
       "order": 0,
@@ -241,11 +295,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "产地动力煤分析",
       "keyword": "产地动力煤分析",
       "url": "https://www.ctctc.cn/info/469482.jspx",
-      "source": "",
+      "source": "中国太原煤炭交易中心",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-03",
+      "updateTimes": {
+        "2026-08": "2026-08-03"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：中国太原煤炭交易中心",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -257,6 +314,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券7.5—P11-P12",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券7.5—P11-P12",
       "order": 0,
@@ -270,6 +330,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国太原煤炭交易网",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-03",
+      "updateTimes": {
+        "2026-08": "2026-08-03"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国太原煤炭交易网",
       "order": 0,
@@ -283,6 +346,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国太原煤炭交易中心",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-07-31",
+      "updateTimes": {
+        "2026-08": "2026-07-31"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国太原煤炭交易中心",
       "order": 0,
@@ -293,11 +359,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "临汾 长治低硫贫焦精煤价格趋势图",
       "keyword": "临汾 长治低硫贫焦精煤价格趋势图",
       "url": "https://www.ctctc.cn/info/469442.jspx",
-      "source": "",
+      "source": "中国太原煤炭交易中心",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-03",
+      "updateTimes": {
+        "2026-08": "2026-08-03"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：中国太原煤炭交易中心",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -309,6 +378,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券7.5—P12-13",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券7.5—P12-13",
       "order": 0,
@@ -322,6 +394,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券7.5—P12-13",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券7.5—P12-13",
       "order": 0,
@@ -335,6 +410,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券-p14-图16、17",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券-p14-图16、17",
       "order": 0,
@@ -348,6 +426,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券P14-15",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券P14-15",
       "order": 0,
@@ -361,6 +442,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券-p20-图42、43、44",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券-p20-图42、43、44",
       "order": 0,
@@ -374,6 +458,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券P20-P21",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券P20-P21",
       "order": 0,
@@ -387,6 +474,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券7.5—P23",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券7.5—P23",
       "order": 0,
@@ -400,6 +490,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券7.5—P7-P23",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券7.5—P7-P23",
       "order": 0,
@@ -413,6 +506,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：开源证券-P17",
       "category": "煤炭发展情况分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：开源证券-P17",
       "order": 0,
@@ -426,6 +522,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "国能580公众号",
       "category": "煤炭行业发展动向",
       "updateTime": "2026-07-07",
+      "updateTimes": {
+        "2026-08": "2026-07-07"
+      },
       "updateStatus": "已更新",
       "note": "来源：国能580公众号",
       "order": 0,
@@ -439,6 +538,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "国能580公众号",
       "category": "煤炭行业发展动向",
       "updateTime": "2026-07-14",
+      "updateTimes": {
+        "2026-08": "2026-07-14"
+      },
       "updateStatus": "已更新",
       "note": "来源：国能580公众号",
       "order": 0,
@@ -452,6 +554,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "国能580公众号",
       "category": "煤炭行业发展动向",
       "updateTime": "2026-07-21",
+      "updateTimes": {
+        "2026-08": "2026-07-21"
+      },
       "updateStatus": "已更新",
       "note": "来源：国能580公众号",
       "order": 0,
@@ -465,6 +570,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "国能580",
       "category": "煤炭行业发展动向",
       "updateTime": "2026-07-29",
+      "updateTimes": {
+        "2026-08": "2026-07-29"
+      },
       "updateStatus": "已更新",
       "note": "来源：国能580",
       "order": 0,
@@ -477,8 +585,11 @@ const TEMPLATE_INITIAL_DATA = {
       "url": "http://m.ccoalnews.com/news/202608/11/c204305.html",
       "source": "人民日报海外版",
       "category": "煤炭行业发展动向",
-      "updateTime": "",
-      "updateStatus": "待更新",
+      "updateTime": "2026-07-11",
+      "updateTimes": {
+        "2026-08": "2026-07-11"
+      },
+      "updateStatus": "已更新",
       "note": "来源：人民日报海外版",
       "order": 0,
       "dataMonth": "2026-08"
@@ -490,8 +601,11 @@ const TEMPLATE_INITIAL_DATA = {
       "url": "https://www.coalchina.org.cn/index.php?m=content&c=index&a=show&catid=72&id=162343",
       "source": "中国煤炭工业协会",
       "category": "煤炭行业发展动向",
-      "updateTime": "",
-      "updateStatus": "待更新",
+      "updateTime": "2026-08-04",
+      "updateTimes": {
+        "2026-08": "2026-08-04"
+      },
+      "updateStatus": "已更新",
       "note": "来源：中国煤炭工业协会",
       "order": 0,
       "dataMonth": "2026-08"
@@ -504,6 +618,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "国家统计局",
       "category": "煤炭行业下游产业链运行态势分析",
       "updateTime": "2026-08-17",
+      "updateTimes": {
+        "2026-08": "2026-08-17"
+      },
       "updateStatus": "已更新",
       "note": "来源：国家统计局",
       "order": 0,
@@ -517,6 +634,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "易能电力服务公众号",
       "category": "煤炭行业下游产业链运行态势分析",
       "updateTime": "2026-08-06",
+      "updateTimes": {
+        "2026-08": "2026-08-06"
+      },
       "updateStatus": "已更新",
       "note": "来源：易能电力服务公众号",
       "order": 0,
@@ -530,6 +650,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "我的钢铁网",
       "category": "煤炭行业下游产业链运行态势分析",
       "updateTime": "2026-08-03",
+      "updateTimes": {
+        "2026-08": "2026-08-03"
+      },
       "updateStatus": "已更新",
       "note": "来源：我的钢铁网",
       "order": 0,
@@ -543,6 +666,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "冶金工业信息中心公众号",
       "category": "煤炭行业下游产业链运行态势分析",
       "updateTime": "2026-08-03",
+      "updateTimes": {
+        "2026-08": "2026-08-03"
+      },
       "updateStatus": "已更新",
       "note": "来源：冶金工业信息中心公众号",
       "order": 0,
@@ -556,6 +682,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "百年建筑官网公众号",
       "category": "煤炭行业下游产业链运行态势分析",
       "updateTime": "2026-08-03",
+      "updateTimes": {
+        "2026-08": "2026-08-03"
+      },
       "updateStatus": "已更新",
       "note": "来源：百年建筑官网公众号",
       "order": 0,
@@ -569,6 +698,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国氮肥工业协会公众号",
       "category": "煤炭行业下游产业链运行态势分析",
       "updateTime": "2026-08-07",
+      "updateTimes": {
+        "2026-08": "2026-08-07"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国氮肥工业协会公众号",
       "order": 0,
@@ -582,6 +714,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "上海证券交易所；备注：在表格中分析",
       "category": "重点煤炭企业发展动向",
       "updateTime": "2026-08-18",
+      "updateTimes": {
+        "2026-08": "2026-08-18"
+      },
       "updateStatus": "已更新",
       "note": "来源：上海证券交易所；备注：在表格中分析",
       "order": 0,
@@ -595,6 +730,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "上海证券交易所",
       "category": "重点煤炭企业发展动向",
       "updateTime": "2026-07-31",
+      "updateTimes": {
+        "2026-08": "2026-07-31"
+      },
       "updateStatus": "已更新",
       "note": "来源：上海证券交易所",
       "order": 0,
@@ -608,6 +746,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国煤炭工业协会公众号",
       "category": "重点煤炭企业发展动向",
       "updateTime": "2026-08-18",
+      "updateTimes": {
+        "2026-08": "2026-08-18"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国煤炭工业协会公众号",
       "order": 0,
@@ -621,6 +762,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "泰度煤炭公众号",
       "category": "煤炭行业区域发展动向分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：泰度煤炭公众号",
       "order": 0,
@@ -634,6 +778,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国太原煤炭价格指数",
       "category": "煤炭行业区域发展动向分析",
       "updateTime": "2026-07-31",
+      "updateTimes": {
+        "2026-08": "2026-07-31"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国太原煤炭价格指数",
       "order": 0,
@@ -647,6 +794,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "泰度煤炭公众号",
       "category": "煤炭行业区域发展动向分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：泰度煤炭公众号",
       "order": 0,
@@ -657,11 +807,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "陕西动力煤均价：时间：2026/08/2：来源：泰度煤炭公众号",
       "keyword": "陕西动力煤均价：时间：2026/08/2：来源：泰度煤炭公众号",
       "url": "https://mp.weixin.qq.com/s/Jbu7hNwBiQ1pprvtuVWcIg",
-      "source": "",
+      "source": "泰度煤炭公众号",
       "category": "煤炭行业区域发展动向分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：泰度煤炭公众号",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -670,11 +823,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "新疆动力煤价格走势：时间：2026/07/31：来源：新疆煤炭交易中心公众号",
       "keyword": "新疆动力煤价格走势：时间：2026/07/31：来源：新疆煤炭交易中心公众号",
       "url": "https://mp.weixin.qq.com/s/MVcXpQQ9mhUqBBjkUqbtSQ",
-      "source": "",
+      "source": "新疆煤炭交易中心公众号",
       "category": "煤炭行业区域发展动向分析",
       "updateTime": "2026-07-31",
+      "updateTimes": {
+        "2026-08": "2026-07-31"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：新疆煤炭交易中心公众号",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -686,6 +842,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：大同证券7.5—P7",
       "category": "煤炭行业区域发展动向分析",
       "updateTime": "2026-08-04",
+      "updateTimes": {
+        "2026-08": "2026-08-04"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：大同证券7.5—P7",
       "order": 0,
@@ -696,11 +855,14 @@ const TEMPLATE_INITIAL_DATA = {
       "title": "河南冶金煤价格走势：时间：2026/07/5：来源：泰度煤炭公众号",
       "keyword": "河南冶金煤价格走势：时间：2026/07/5：来源：泰度煤炭公众号",
       "url": "https://mp.weixin.qq.com/s/xdcbiTfOjM_k0InFa1nR1A",
-      "source": "",
+      "source": "泰度煤炭公众号",
       "category": "煤炭行业区域发展动向分析",
       "updateTime": "2026-07-05",
+      "updateTimes": {
+        "2026-08": "2026-07-05"
+      },
       "updateStatus": "已更新",
-      "note": "",
+      "note": "来源：泰度煤炭公众号",
       "order": 0,
       "dataMonth": "2026-08"
     },
@@ -712,6 +874,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "慧博智能策略终端；备注：国泰海通证券—P12",
       "category": "煤炭行业区域发展动向分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：慧博智能策略终端；备注：国泰海通证券—P12",
       "order": 0,
@@ -725,6 +890,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券7.5—P11-P12",
       "category": "国际煤炭市场发展动向分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券7.5—P11-P12",
       "order": 0,
@@ -738,6 +906,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：开源证券7.5—P11",
       "category": "国际煤炭市场发展动向分析",
       "updateTime": "2026-07-03",
+      "updateTimes": {
+        "2026-08": "2026-07-03"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：开源证券7.5—P11",
       "order": 0,
@@ -751,6 +922,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：信达证券7.5—P12-P13",
       "category": "国际煤炭市场发展动向分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：信达证券7.5—P12-P13",
       "order": 0,
@@ -764,6 +938,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国财富网；备注：开源证券P19",
       "category": "国际煤炭市场发展动向分析",
       "updateTime": "2026-07-03",
+      "updateTimes": {
+        "2026-08": "2026-07-03"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国财富网；备注：开源证券P19",
       "order": 0,
@@ -777,6 +954,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "汇通财经公众号；备注：月底最后一天",
       "category": "国际煤炭市场发展动向分析",
       "updateTime": "2026-07-02",
+      "updateTimes": {
+        "2026-08": "2026-07-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：汇通财经公众号；备注：月底最后一天",
       "order": 0,
@@ -790,6 +970,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "慧博智能策略终端；备注：国泰海通证券",
       "category": "国际煤炭市场发展动向分析",
       "updateTime": "2026-08-02",
+      "updateTimes": {
+        "2026-08": "2026-08-02"
+      },
       "updateStatus": "已更新",
       "note": "来源：慧博智能策略终端；备注：国泰海通证券",
       "order": 0,
@@ -803,6 +986,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国煤炭经济网；备注：世界煤炭-综合-全国煤炭出口",
       "category": "国际煤炭市场发展动向分析",
       "updateTime": "2026-08-14",
+      "updateTimes": {
+        "2026-08": "2026-08-14"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国煤炭经济网；备注：世界煤炭-综合-全国煤炭出口",
       "order": 0,
@@ -816,6 +1002,9 @@ const TEMPLATE_INITIAL_DATA = {
       "source": "中国太原煤炭交易中心",
       "category": "煤炭行业综合观察",
       "updateTime": "2026-08-05",
+      "updateTimes": {
+        "2026-08": "2026-08-05"
+      },
       "updateStatus": "已更新",
       "note": "来源：中国太原煤炭交易中心",
       "order": 0,
